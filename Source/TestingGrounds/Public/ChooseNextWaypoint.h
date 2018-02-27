@@ -17,5 +17,10 @@ class TESTINGGROUNDS_API UChooseNextWaypoint : public UBTTaskNode
 	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
 	
 	UPROPERTY(EditAnywhere, Category = "Blackboard")
-	struct FBlackboardKeySelector IndexKey;
+	struct FBlackboardKeySelector Index;
+
+	UPROPERTY(EditAnywhere, Category = "Blackboard")
+	struct FBlackboardKeySelector Waypoint;
+
+	TArray<AActor*> PatrolPointsi;
 };

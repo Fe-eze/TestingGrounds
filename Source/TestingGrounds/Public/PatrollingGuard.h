@@ -14,6 +14,7 @@ class TESTINGGROUNDS_API APatrollingGuard : public ATP_ThirdPersonCharacter
 {
 	GENERATED_BODY()
 
+public: // TODO create getter function
 		UPROPERTY(EditInstanceOnly, Category = "C++ Patrol Route")
 		TArray<AActor*> PatrolPoints;
 	
