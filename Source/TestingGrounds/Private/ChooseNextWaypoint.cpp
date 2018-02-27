@@ -20,8 +20,8 @@ EBTNodeResult::Type UChooseNextWaypoint::ExecuteTask(UBehaviorTreeComponent& Own
 	// 2 Set next waypoint
 	auto BlackboardComp = OwnerComp.GetBlackboardComponent();
 	auto Indexi = BlackboardComp->GetValueAsInt(Index.SelectedKeyName); // get bb val as int
-	auto bbval = PatrolPointsi[Indexi]; // use indexi as index to look thru local patrol pts array
-	BlackboardComp->SetValueAsObject(Waypoint.SelectedKeyName, bbval); // set bb value as object
+	//auto bbval = PatrolPointsi[Indexi]; // use indexi as index to look thru local patrol pts array
+	BlackboardComp->SetValueAsObject(Waypoint.SelectedKeyName, PatrolPointsi[Indexi]); // set bb value as object
 
 	// 3 Cycle Index
 	auto NextIndex = (Indexi +1) % PatrolPointsi.Num(); // return new indexi = indexi modulo patrolpointsi.length
